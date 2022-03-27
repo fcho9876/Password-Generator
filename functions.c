@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <time.h> 
 #include "functions.h"
 
 #define password_length 10
 
 int user_input;
-int index = 0;
 char all[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/,.-+=~`<>:";
 char lower_upper[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char lower_upper_number[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -34,7 +35,7 @@ void select_password_type() {
     srand((unsigned) time(&t));
     if (user_input == 1) {
         // lower case alphabet only
-        for(index = 0; index < password_length; index++) {
+        for(int i = 0; i < password_length; i++) {
 		    printf("%c", alphabet_lower[rand() % (sizeof alphabet_lower - 1)]);
 	    }
 
@@ -42,7 +43,7 @@ void select_password_type() {
         // lower + upper
         char selected_char_set[sizeof(lower_upper)];
         strcpy(selected_char_set, lower_upper);
-        for(index = 0; index < password_length; index++) {
+        for(int i = 0; i < password_length; i++) {
 		    printf("%c", selected_char_set[rand() % (sizeof selected_char_set - 1)]);
 	    }
         
@@ -50,7 +51,7 @@ void select_password_type() {
         // low + upper + number
         char selected_char_set[sizeof(lower_upper_number)];
         strcpy(selected_char_set, lower_upper_number);
-        for(index = 0; index < password_length; index++) {
+        for(int i = 0; i < password_length; i++) {
 		    printf("%c", selected_char_set[rand() % (sizeof selected_char_set - 1)]);
 	    }
         
@@ -58,7 +59,7 @@ void select_password_type() {
        // low + upper + number + special symbol 
         char selected_char_set[sizeof(lower_upper_number_symbol)];
         strcpy(selected_char_set, lower_upper_number_symbol);
-        for(index = 0; index < password_length; index++) {
+        for(int i = 0; i < password_length; i++) {
 		    printf("%c", selected_char_set[rand() % (sizeof selected_char_set - 1)]);
 	    }
     }

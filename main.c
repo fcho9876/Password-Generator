@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "functions.h"
 
-int main() {
+int main(void) {
     read_user_input();
     select_password_type();
 }
