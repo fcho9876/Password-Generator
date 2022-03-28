@@ -27,7 +27,6 @@ void read_length() {
 
 void select_password_type() {
 
-    char all[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/,.-+=~`<>:";
     char lower_upper[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char lower_upper_number[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     char lower_upper_number_symbol[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/,.-+=~`<>:";
@@ -43,6 +42,7 @@ void select_password_type() {
         for(int i = 0; i < password_length; i++) {
 		    printf("%c", alphabet_lower[rand() % (sizeof alphabet_lower - 1)]);
 	    }
+        printf("\n");
 
     } else if (user_input == 2) {
         // lower + upper
@@ -51,6 +51,7 @@ void select_password_type() {
         for(int i = 0; i < password_length; i++) {
 		    printf("%c", selected_char_set[rand() % (sizeof selected_char_set - 1)]);
 	    }
+        printf("\n");
         
     } else if (user_input == 3) {
         // low + upper + number
@@ -59,6 +60,7 @@ void select_password_type() {
         for(int i = 0; i < password_length; i++) {
 		    printf("%c", selected_char_set[rand() % (sizeof selected_char_set - 1)]);
 	    }
+        printf("\n");
         
     } else if (user_input == 4) {
        // low + upper + number + special symbol 
@@ -67,5 +69,6 @@ void select_password_type() {
         for(int i = 0; i < password_length; i++) {
 		    printf("%c", selected_char_set[rand() % (sizeof selected_char_set - 1)]);
 	    }
+        printf("\n");
     }
 }

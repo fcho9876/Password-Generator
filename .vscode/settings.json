@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "stdlib.h": "c",
-        "password_string.h": "c"
+        "password_string.h": "c",
+        "functions.h": "c"
     }
 }
