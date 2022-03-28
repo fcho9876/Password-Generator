@@ -6,5 +6,6 @@
 
 int main(void) {
     read_user_input();
+    read_length();
     select_password_type();
 }
